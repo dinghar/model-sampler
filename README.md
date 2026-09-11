@@ -36,3 +36,4 @@ https://github.com/user-attachments/assets/af280340-d35a-4310-9da6-2f673b2dfa90
 3. Support analysis of more robust scoring (i.e. numbers instead of booleans).
 4. Allow for scope id exclusion (i.e. if LLM calls error out, don't include that session in scoring).
 5. Support comparison of additional metrics, such as latency and uptime.
+6. Support implicit success metrics instead of just explicit.
