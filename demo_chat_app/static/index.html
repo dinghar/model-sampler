@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <button id="new-chat-btn">+ New chat</button>
+      <div id="session-list" class="session-list"></div>
+      <a id="dashboard-link" class="dashboard-link" href="#" target="_blank" rel="noopener">
+        Open eval dashboard ↗
+      </a>
+    </aside>
+
+    <main class="chat-area">
+      <div id="empty-state" class="empty-state">
+        <p>Start a new chat to begin building your demo dataset.</p>
+      </div>
+
+      <div id="chat-panel" class="chat-panel" hidden>
+        <div id="messages" class="messages"></div>
+
+        <form id="message-form" class="message-form">
+          <input id="message-input" type="text" placeholder="Say something..." autocomplete="off" />
+          <button type="submit">Send</button>
+        </form>
+
+        <div class="feedback-row">
+          <span class="feedback-label">Rate this conversation:</span>
+          <button id="thumbs-up" class="vote-btn" data-vote="up" title="Thumbs up">👍</button>
+          <button id="thumbs-down" class="vote-btn" data-vote="down" title="Thumbs down">👎</button>
+          <span id="vote-status" class="vote-status"></span>
+        </div>
+
+        <details class="debug-drawer">
+          <summary>Debug info</summary>
+          <div id="debug-content" class="debug-content"></div>
+        </details>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

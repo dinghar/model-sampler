@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: sampler
+      POSTGRES_PASSWORD: sampler
+      POSTGRES_DB: model_tier_sampler
+    ports:
+      - "5433:5432"
+    volumes:
+      - sampler_pgdata:/var/lib/postgresql/data
+
+volumes:
+  sampler_pgdata:

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Model-Tier Evaluation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Model-Tier Evaluation</h1>
+    <p class="subtitle">Live comparison of weak vs. control model tiers, per call site.</p>
+  </header>
+
+  <main>
+    <section id="call-sites-section">
+      <div class="section-header">
+        <h2>Call Sites</h2>
+        <div class="header-actions">
+          <span id="run-analysis-status" class="run-status"></span>
+          <button id="run-analysis-btn">Run analysis now</button>
+          <button id="new-call-site-btn">+ New call site</button>
+        </div>
+      </div>
+      <div id="call-sites-list" class="cards"></div>
+    </section>
+
+    <dialog id="new-call-site-dialog">
+      <form id="new-call-site-form" method="dialog">
+        <h3>New call site</h3>
+        <label>Call site ID <input name="call_site_id" required placeholder="chat-reply" /></label>
+        <label>Control model <input name="control_model" required placeholder="gpt-5.1" /></label>
+        <label>Weak model <input name="weak_model" required placeholder="haiku-4.5" /></label>
+        <label>Sample rate (0-1) <input name="sample_rate" type="number" step="0.01" min="0" max="1" value="0.05" required /></label>
+        <label>Salt <input name="salt" required value="v1" /></label>
+        <label>Outcome score type
+          <select name="outcome_score_type">
+            <option value="boolean">boolean</option>
+            <option value="scale">scale</option>
+          </select>
+        </label>
+        <div class="dialog-actions">
+          <button type="button" id="cancel-new-call-site">Cancel</button>
+          <button type="submit">Create</button>
+        </div>
+        <p class="error" id="new-call-site-error"></p>
+      </form>
+    </dialog>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
