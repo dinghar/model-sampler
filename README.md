@@ -33,3 +33,6 @@ https://github.com/user-attachments/assets/af280340-d35a-4310-9da6-2f673b2dfa90
 
 1. Use OpenRouter to easily support a variety of models.
 2. Don't make the user select the models and configs to try. The user should pass in a model to start with, and the tool finds the cheapest model with comparable performance.
+3. Support analysis of more robust scoring (i.e. numbers instead of booleans).
+4. Allow for scope id exclusion (i.e. if LLM calls error out, don't include that session in scoring).
+5. Support comparison of additional metrics, such as latency and uptime.
