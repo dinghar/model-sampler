@@ -25,6 +25,10 @@ If your goal is to save money, why burn tokens on heavy eval pipelines?
 
 In the demo video, a user asks a chatbot to solve various NYT Pangrams and gives a thumbs up or down if the answer is correct. Inference is sampled between Sonnet 5 with Thinking enabled or disabled.
 
+https://github.com/user-attachments/assets/af280340-d35a-4310-9da6-2f673b2dfa90
+
+<img width="1104" height="447" alt="Screenshot 2026-09-11 at 10 32 56 AM" src="https://github.com/user-attachments/assets/ae5e4d79-2749-4ec6-b2c1-d467889e7169" />
+
 ## Roadmap
 
 1. Use OpenRouter to easily support a variety of models.
